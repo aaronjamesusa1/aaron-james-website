@@ -1,0 +1,141 @@
+/* privacy.css - Specific styles for Privacy Policy page */
+/* This file should be linked AFTER style.css in your HTML */
+
+/* Legal Page Container */
+.legal-page {
+  padding: 100px 0 60px;
+  background-color: var(--dark);
+}
+
+.legal-header {
+  text-align: center;
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.legal-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.last-updated {
+  color: var(--gray);
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* Legal Content Styling */
+.legal-content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.legal-content section {
+  margin-bottom: 40px;
+}
+
+.legal-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--primary);
+  position: relative;
+  padding-left: 25px;
+}
+
+.legal-content h2:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary);
+  border-radius: 50%;
+}
+
+.legal-content p {
+  margin-bottom: 15px;
+}
+
+.legal-content ul {
+  margin: 15px 0;
+  padding-left: 20px;
+  list-style: none;
+}
+
+.legal-content li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.legal-content li:before {
+  content: '•';
+  position: absolute;
+  left: 10px;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.legal-content strong {
+  color: white;
+  font-weight: 600;
+}
+
+.legal-content address {
+  font-style: normal;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* Links in Legal Content */
+.legal-content a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.legal-content a:hover {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .legal-page {
+    padding: 80px 0 40px;
+  }
+  
+  .legal-header h1 {
+    font-size: 2rem;
+  }
+  
+  .legal-content h2 {
+    font-size: 1.3rem;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .legal-page {
+    padding: 70px 0 30px;
+  }
+  
+  .legal-header {
+    margin-bottom: 30px;
+  }
+  
+  .legal-content h2:before {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .legal-content li {
+    padding-left: 20px;
+  }
+}
