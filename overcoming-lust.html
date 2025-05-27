@@ -26,25 +26,6 @@
   <link rel="stylesheet" href="css/quotes_blog.css">
 </head>
 
-// Display submitted comments (will work after first submission)
-if (window.location.search.includes('comment-submitted=true')) {
-  const params = new URLSearchParams(window.location.search);
-  const commentHTML = `
-    <div class="comment">
-      <div class="comment-author">
-        <div class="author-info">
-          <h4>${params.get('name')}</h4>
-          <span class="comment-date">Just now</span>
-        </div>
-      </div>
-      <div class="comment-content">
-        <p>${params.get('comment')}</p>
-      </div>
-    </div>
-  `;
-  document.querySelector('.comments-list').insertAdjacentHTML('afterbegin', commentHTML);
-}
-
 <body>
   <!-- HEADER -->
   <header class="site-header">
@@ -231,55 +212,6 @@ if (window.location.search.includes('comment-submitted=true')) {
         </div>
       </div>
     </article>
-
-    <!-- Comment Section -->
-    <form class="comment-form" netlify name="blog-comments">
-      <input type="hidden" name="post-title" value="Overcoming Lust">
-      <div class="form-group">
-        <label for="name">Name *</label>
-        <input type="text" id="name" name="name" required>
-     </div>
-     <div class="form-group">
-       <label for="email">Email (will not be published) *</label>
-       <input type="email" id="email" name="email" required>
-     </div>
-      <div class="form-group">
-        <label for="comment">Your Comment *</label>
-        <textarea id="comment" name="comment" rows="6" required></textarea>
-      </div>
-      <button type="submit" class="submit-btn">Post Comment</button>
-    </form>
-
-     <!-- Existing Comments -->
-      <div class="comments-list">
-       <h3>Comments (2)</h3>
-    
-        <div class="comment">
-         <div class="comment-author">
-            <div class="author-info">
-             <h4>John D.</h4>
-              <span class="comment-date">May 27, 2025</span>
-            </div>
-          </div>
-         <div class="comment-content">
-           <p>These verses really spoke to me. Especially 1 Corinthians 10:13 - knowing God provides a way out gives me hope in my struggle.</p>
-         </div>
-        </div>
-    
-        <div class="comment">
-          <div class="comment-author">
-           <div class="author-info">
-             <h4>Sarah M.</h4>
-              <span class="comment-date">May 27, 2025</span>
-            </div>
-         </div>
-         <div class="comment-content">
-           <p>Thank you for compiling this list! I'm sharing it with my small group. The section on God's cleansing power was particularly powerful.</p>
-         </div>
-        </div>
-      </div>
-      </div>
-     </main>
 
   <!-- JavaScript -->
   <script src="js/main.js"></script>
