@@ -26,6 +26,36 @@
   <link rel="stylesheet" href="css/quotes_blog.css">
 </head>
 
+<script>
+document.querySelector('.comment-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const commentText = document.getElementById('comment').value;
+    
+    if (name && commentText) {
+        const commentsList = document.querySelector('.comments-list');
+        const newComment = document.createElement('div');
+        newComment.className = 'comment';
+        newComment.innerHTML = `
+            <div class="comment-author">
+                <img src="images/avatar-placeholder.jpg" alt="User avatar">
+                <div class="author-info">
+                    <h4>${name}</h4>
+                    <span class="comment-date">Just now</span>
+                </div>
+            </div>
+            <div class="comment-content">
+                <p>${commentText}</p>
+            </div>
+        `;
+        
+        commentsList.prepend(newComment);
+        this.reset();
+    }
+});
+</script>
+
 <body>
   <!-- HEADER -->
   <header class="site-header">
