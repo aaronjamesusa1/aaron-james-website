@@ -26,35 +26,24 @@
   <link rel="stylesheet" href="css/quotes_blog.css">
 </head>
 
-<script>
-document.querySelector('.comment-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const name = document.getElementById('name').value;
-    const commentText = document.getElementById('comment').value;
-    
-    if (name && commentText) {
-        const commentsList = document.querySelector('.comments-list');
-        const newComment = document.createElement('div');
-        newComment.className = 'comment';
-        newComment.innerHTML = `
-            <div class="comment-author">
-                <img src="images/avatar-placeholder.jpg" alt="User avatar">
-                <div class="author-info">
-                    <h4>${name}</h4>
-                    <span class="comment-date">Just now</span>
-                </div>
-            </div>
-            <div class="comment-content">
-                <p>${commentText}</p>
-            </div>
-        `;
-        
-        commentsList.prepend(newComment);
-        this.reset();
-    }
-});
-</script>
+// Display submitted comments (will work after first submission)
+if (window.location.search.includes('comment-submitted=true')) {
+  const params = new URLSearchParams(window.location.search);
+  const commentHTML = `
+    <div class="comment">
+      <div class="comment-author">
+        <div class="author-info">
+          <h4>${params.get('name')}</h4>
+          <span class="comment-date">Just now</span>
+        </div>
+      </div>
+      <div class="comment-content">
+        <p>${params.get('comment')}</p>
+      </div>
+    </div>
+  `;
+  document.querySelector('.comments-list').insertAdjacentHTML('afterbegin', commentHTML);
+}
 
 <body>
   <!-- HEADER -->
@@ -244,23 +233,22 @@ document.querySelector('.comment-form').addEventListener('submit', function(e) {
     </article>
 
     <!-- Comment Section -->
-    <div class="comment-section container">
-      <h3>Leave a Comment</h3>
-      <form class="comment-form">
-       <div class="form-group">
-          <label for="name">Name *</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email (will not be published) *</label>
-          <input type="email" id="email" name="email" required>
-       </div>
-        <div class="form-group">
-          <label for="comment">Your Comment *</label>
-          <textarea id="comment" name="comment" rows="6" required></textarea>
-        </div>
-        <button type="submit" class="submit-btn">Post Comment</button>
-      </form>
+    <form class="comment-form" netlify name="blog-comments">
+      <input type="hidden" name="post-title" value="Overcoming Lust">
+      <div class="form-group">
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" required>
+     </div>
+     <div class="form-group">
+       <label for="email">Email (will not be published) *</label>
+       <input type="email" id="email" name="email" required>
+     </div>
+      <div class="form-group">
+        <label for="comment">Your Comment *</label>
+        <textarea id="comment" name="comment" rows="6" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Post Comment</button>
+    </form>
 
      <!-- Existing Comments -->
       <div class="comments-list">
