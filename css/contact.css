@@ -57,8 +57,9 @@
   margin-top: 20px;
 }
 
-.g-recaptcha {
-  margin-bottom: 20px; /* space below the reCAPTCHA */
+[data-netlify-recaptcha],
+button[type="submit"] {
+  margin-bottom: 20px;
 }
 
 
