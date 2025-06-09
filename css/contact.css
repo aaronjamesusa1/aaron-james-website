@@ -57,6 +57,11 @@
   margin-top: 20px;
 }
 
+.g-recaptcha {
+  margin-bottom: 20px; /* space below the reCAPTCHA */
+}
+
+
 /* FORM STYLES */
 .form-group {
   margin-bottom: 20px;
