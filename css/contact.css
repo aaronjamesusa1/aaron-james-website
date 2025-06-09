@@ -53,6 +53,10 @@
   color: #222;
 }
 
+.contact-form h3 {
+  margin-top: 20px;
+}
+
 /* FORM STYLES */
 .form-group {
   margin-bottom: 20px;
