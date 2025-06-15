@@ -508,6 +508,9 @@
   object-fit: contain;
 }
 
+.h3{
+  margin-top: 20px;
+}
 
 /* ====== FOOTER ====== */
 .site-footer {
