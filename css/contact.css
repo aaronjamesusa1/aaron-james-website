@@ -130,7 +130,6 @@
 .social-icons {
   display: flex;
   gap: 15px;
-  justify-content: center;
 }
 
 .social-icons a {
@@ -143,6 +142,8 @@
   color: white;
   border-radius: 50%;
   transition: all 0.3s;
+  font-size: 18px;
+  text-decoration: none;
 }
 
 .social-icons a:hover {
