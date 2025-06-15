@@ -594,21 +594,9 @@
 }
 
 @media (max-width: 768px) {
-  .main-nav {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: var(--darker);
-    padding: 20px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-  }
-
   .header-container {
     flex-direction: column;
     text-align: center;
-    padding: 0 20px;
   }
   
   .main-nav {
@@ -622,58 +610,5 @@
   .btn {
     width: 100%;
     justify-content: center;
-  }
-
-  .logo {
-    padding-left: 0;
-  }
-
-  .main-nav.active {
-    display: block;
-  }
-  
-  .main-nav ul {
-    flex-direction: column;
-  }
-  
-  .main-nav li {
-    margin: 10px 0;
-  }
-  
-  .mobile-menu-btn {
-    display: block;
-  }
-  
-  .hero h2 {
-    font-size: 2.2rem;
-  }
-  
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .book-actions {
-    flex-direction: column;
-  }
-  
-  .mission-stats {
-    flex-direction: column;
-    gap: 30px;
-  }
-}
-
-@media (max-width: 576px) {
-  .hero {
-    height: auto;
-    padding: 100px 0;
-  }
-  
-  .hero h2 {
-    font-size: 1.8rem;
-  }
-  
-  .section-title {
-    font-size: 1.8rem;
   }
 }
