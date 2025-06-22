@@ -139,20 +139,16 @@ p {
 }
 
 li {
-  display: block;
-  position: relative;
-  padding-left: 25px;
-  margin: 12px 0;
+  display: list-item;
+  list-style-position: inside;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 0;
 }
 
-li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  top: 0;
+li::marker {
   color: #8e44ad;
   font-size: 1.2rem;
-  line-height: 1;
 }
 
 blockquote {
