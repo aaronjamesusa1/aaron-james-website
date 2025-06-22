@@ -139,19 +139,19 @@ p {
 }
 
 li {
-  list-style: none;
-  padding-left: 25px;
+  display: block;
   position: relative;
-  margin: 10px 0;
+  padding-left: 25px;
+  margin: 12px 0;
 }
 
 li::before {
   content: "•";
-  color: #8e44ad;
-  font-size: 1.5rem;
   position: absolute;
   left: 0;
   top: 0;
+  color: #8e44ad;
+  font-size: 1.2rem;
   line-height: 1;
 }
 
