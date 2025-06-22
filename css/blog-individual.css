@@ -159,18 +159,6 @@ p {
   top: -5px;
 }
 
-.experiment-list {
-  margin-left: 1.5rem;
-  padding-left: 1rem;
-  font-size: 1rem;
-  line-height: 1.6;
-  list-style-type: decimal;
-}
-
-.experiment-list li {
-  margin-bottom: 0.5rem;
-}
-
 blockquote {
   border-left: 3px solid #8e44ad;
   padding-left: 20px;
