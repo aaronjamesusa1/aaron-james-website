@@ -1,0 +1,396 @@
+/* ===== pursuit.css ===== */
+/* Base Styles */
+.blog-main {
+  padding: 100px 0;
+  background-color: #f9f6fa;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Blog Header */
+.blog-header {
+  padding: 60px 0 30px;
+  text-align: center;
+}
+
+.breadcrumb {
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.breadcrumb a {
+  color: #8e44ad;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+  color: #6c3483;
+}
+
+.post-meta {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.post-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.blog-header h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin: 0 auto 30px;
+  color: #222;
+  max-width: 720px;
+}
+
+.author-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.author-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #eee;
+}
+
+.author-info {
+  text-align: left;
+}
+
+.author-info span {
+  font-size: 0.8rem;
+  color: #666;
+  display: block;
+}
+
+.author-info h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  margin: 3px 0;
+  color: #2c3e50;
+}
+
+/* Featured Image */
+.featured-image {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.featured-image img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.5s ease;
+}
+
+.featured-image:hover img {
+  transform: scale(1.01);
+}
+
+.caption {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-top: 12px;
+  text-align: center;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* Content Area */
+.content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+.content p {
+  margin-bottom: 1.8rem;
+  text-align: justify;
+  hyphens: auto;
+  font-weight: 400;
+}
+
+.content p:first-of-type {
+  font-size: 1.25rem;
+  line-height: 1.9;
+  color: #333;
+}
+
+/* Images */
+.image-right, .image-left {
+  width: 48%;
+  margin: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.image-right {
+  float: right;
+  margin-right: 0;
+  shape-outside: margin-box;
+}
+
+.image-left {
+  float: left;
+  margin-left: 0;
+  shape-outside: margin-box;
+}
+
+.image-right img, 
+.image-left img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.image-right:hover, 
+.image-left:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.image-right:hover img,
+.image-left:hover img {
+  transform: scale(1.03);
+}
+
+/* Quote Box */
+.quote-box {
+  background: linear-gradient(135deg, rgba(142,68,173,0.05) 0%, rgba(255,255,255,0.8) 100%);
+  border-left: 4px solid #8e44ad;
+  padding: 1.8rem;
+  margin: 2.5rem 0;
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #555;
+  border-radius: 0 8px 8px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.quote-box::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  font-size: 5rem;
+  color: rgba(142,68,173,0.1);
+  font-family: serif;
+  line-height: 1;
+}
+
+.quote-box cite {
+  display: block;
+  margin-top: 1rem;
+  font-style: normal;
+  font-size: 0.95rem;
+  color: #888;
+  text-align: right;
+}
+
+/* Text Emphasis */
+.content strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.content p:has(strong) {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.content p:has(strong)::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #8e44ad;
+  font-weight: bold;
+}
+
+/* Footer */
+.blog-footer {
+  background-color: #f8f9fa;
+  padding: 40px;
+  border-radius: 8px;
+  margin-top: 60px;
+}
+
+.discussion-questions h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.discussion-questions ol {
+  padding-left: 20px;
+}
+
+.discussion-questions li {
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.author-bio {
+  display: flex;
+  gap: 30px;
+  margin: 40px 0;
+  padding: 30px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  align-items: center;
+}
+
+.author-bio img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #eee;
+}
+
+.bio-content h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  margin: 0 0 15px;
+  color: #2c3e50;
+}
+
+.bio-content p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.cta {
+  background-color: #e8f4fc;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 40px;
+  font-weight: 500;
+}
+
+.cta a {
+  color: #2980b9;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.cta a:hover {
+  color: #1a5276;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blog-main {
+    padding: 80px 0;
+  }
+  
+  .blog-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .featured-image img {
+    height: 350px;
+  }
+  
+  .post-meta {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .image-right, 
+  .image-left {
+    width: 100%;
+    float: none;
+    margin: 2rem auto;
+  }
+  
+  .author-bio {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .author-bio img {
+    margin: 0 auto 20px;
+  }
+  
+  .quote-box {
+    margin: 2rem -15px;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .content {
+    font-size: 1rem;
+    line-height: 1.7;
+    padding: 0 15px;
+  }
+  
+  .quote-box {
+    font-size: 1.1rem;
+    padding: 1.5rem;
+  }
+  
+  .featured-image img {
+    height: 250px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Content Entry Animation */
+.content > * {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.content > *:nth-child(1) { animation-delay: 0.1s; }
+.content > *:nth-child(2) { animation-delay: 0.2s; }
+.content > *:nth-child(3) { animation-delay: 0.3s; }
+/* Continue this pattern as needed */
