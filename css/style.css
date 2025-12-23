@@ -1,5 +1,4 @@
 /* style.css - Enhanced Beautiful Version */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 :root {
   --primary: #8e44ad;       /* Purple - spiritual theme */
@@ -16,10 +15,10 @@
   --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
   --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
   --gradient-dark: linear-gradient(135deg, var(--dark) 0%, var(--darker) 100%);
-  --font-heading: 'Cormorant Garamond', serif;
-  --font-main: 'Montserrat', sans-serif;
-  --font-body: 'Montserrat', sans-serif;
-  --font-secondary: 'Merriweather', serif;
+  --font-heading: 'Times New Roman', 'Garamond', serif;
+  --font-main: 'Times New Roman', 'Garamond', serif;
+  --font-body: 'Times New Roman', 'Garamond', serif;
+  --font-secondary: 'Times New Roman', 'Garamond', serif;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -248,17 +247,18 @@ img {
 .site-header {
   background: rgba(10, 10, 10, 0.95);
   backdrop-filter: blur(20px);
-  padding: 20px 0;
+  padding: 15px 0;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
   transition: var(--transition);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .site-header.scrolled {
-  padding: 15px 0;
+  padding: 12px 0;
   background: rgba(10, 10, 10, 0.98);
 }
 
@@ -268,35 +268,46 @@ img {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 30px;
 }
 
 .logo h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
+  font-weight: 400;
   background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   transition: var(--transition);
+  letter-spacing: 1px;
 }
 
 .logo:hover h1 {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .main-nav ul {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 0;
   align-items: center;
+}
+
+.main-nav li {
+  margin-left: 0;
+  padding: 0 20px;
+  position: relative;
 }
 
 .main-nav a {
   color: var(--light);
-  font-weight: 500;
-  padding: 10px 0;
+  font-weight: 400;
+  padding: 12px 0;
   position: relative;
   transition: var(--transition);
+  font-size: 1rem;
+  text-transform: none;
+  letter-spacing: 0.5px;
 }
 
 .main-nav a::after {
@@ -312,22 +323,21 @@ img {
 
 .main-nav a:hover::after {
   width: 100%;
-}v a.active {
-  color: var(--primary-light);
+}
+
+.main-nav a.active {
+  color: var(--secondary);
   background: transparent;
 }
 
 .main-nav a.active::after {
   width: 100%;
-}
-
-.main-nav a:hover::after {
-  width: 100%;
+  background: var(--secondary);
 }
 
 .main-nav a:hover {
-  color: var(--primary-light);
-  transform: translateY(-2px);
+  color: var(--secondary);
+  transform: translateY(-1px);
 }
 
 .dropdown {
