@@ -14,7 +14,15 @@
 }
 
 /* ====== HEADER STYLES ====== */
-/* Header styles are now handled by main style.css for consistency */
+.site-header {
+  background-color: var(--darker);
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
 
 .header-container {
   display: flex;
@@ -22,7 +30,73 @@
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-/* Header styles removed - using main style.css for consistency */
+  padding: 0 30px;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.main-nav li {
+  margin-left: 25px;
+  position: relative;
+}
+
+.main-nav a {
+  font-weight: 600;
+  font-size: 0.95rem;
+  position: relative;
+}
+
+.main-nav a:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  bottom: -5px;
+  left: 0;
+  transition: var(--transition);
+}
+
+.main-nav a:hover:after {
+  width: 100%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--darker);
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 5px;
+  padding: 10px 0;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 10px 20px;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--primary);
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
 
 /* ====== PRODUCT HERO SECTION ====== */
 .product-hero {
