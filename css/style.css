@@ -381,7 +381,8 @@ img {
 }
 
 .dropdown-content a:hover {
-  background: rgba(142, 68, 173, 0.1);
+  background: transparent;
+  color: var(--primary-light);
 }
 
 .mobile-menu-btn {
@@ -491,7 +492,8 @@ img {
 }
 
 .dropdown-content a:hover {
-  background-color: var(--primary);
+  background: transparent;
+  color: var(--primary-light);
 }
 
 .mobile-menu-btn {
