@@ -1,0 +1,142 @@
+/* ====== MAIN STRUCTURE ====== */
+.fruit-series-main {
+  padding-top: 100px;
+  background-color: #f9f6fa;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ====== SERIES INTRO ====== */
+.series-intro {
+  padding: 60px 0;
+  text-align: center;
+  background: linear-gradient(135deg, #f8f1ff 0%, #e8f1ff 100%);
+}
+
+.series-intro h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.intro-text {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  font-size: 1.1rem;
+}
+
+.intro-text em {
+  font-style: italic;
+  color: #666;
+}
+
+/* ====== BOOKS GRID ====== */
+.series-books {
+  padding: 60px 0;
+  background: white;
+}
+
+.series-books h2 {
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  color: #222;
+  margin-bottom: 40px;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.book-card {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.book-cover {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  text-align: center;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.book-cover img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.book-info {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.book-info h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: #e0dcdc;
+  margin-bottom: 5px;
+}
+
+.book-info p {
+  color: #f6f7f4;
+}
+
+/* COMING SOON STYLES */
+.book-card.coming-soon .book-cover {
+  background: #f5f5f5;
+}
+
+.coming-soon-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #8e44ad;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* ====== RESPONSIVE DESIGN ====== */
+@media (max-width: 768px) {
+  .series-intro h1 {
+    font-size: 2.2rem;
+  }
+  
+  .books-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .book-cover {
+    height: 250px;
+  }
+}
