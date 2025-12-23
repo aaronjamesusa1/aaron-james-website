@@ -5,8 +5,8 @@
   --primary: #8e44ad;       /* Purple - spiritual theme */
   --primary-light: #a569bd; /* Lighter purple */
   --primary-dark: #7d3c98;  /* Darker purple */
-  --secondary: #f39c12;     /* Orange - accent color */
-  --secondary-light: #f5b041; /* Lighter orange */
+  --secondary: #8e44ad;     /* Changed from orange to purple */
+  --secondary-light: #a569bd; /* Changed from orange to purple */
   --dark: #121212;          /* Dark background */
   --darker: #0a0a0a;        /* Even darker elements */
   --light: #f5f5f5;         /* Light text/background */
@@ -14,7 +14,7 @@
   --gray-light: #999;       /* Lighter gray */
   --success: #27ae60;       /* Green for positive actions */
   --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-  --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
+  --gradient-secondary: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
   --gradient-dark: linear-gradient(135deg, var(--dark) 0%, var(--darker) 100%);
   --font-heading: 'Cormorant Garamond', serif;
   --font-main: 'Montserrat', sans-serif;
@@ -275,10 +275,7 @@ img {
 .logo h1 {
   font-size: 1.8rem;
   font-weight: 400;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: white;
   transition: var(--transition);
   letter-spacing: 1px;
 }
@@ -327,18 +324,26 @@ img {
 }
 
 .main-nav a.active {
-  color: var(--primary-light);
-  background: transparent;
+  color: white;
+  background: var(--primary);
+  padding: 12px 16px;
+  border-radius: 6px;
 }
 
 .main-nav a.active::after {
-  width: 100%;
-  background: var(--primary);
+  width: 0;
 }
 
 .main-nav a:hover {
-  color: var(--primary-light);
+  color: white;
+  background: var(--primary-light);
+  padding: 12px 16px;
+  border-radius: 6px;
   transform: translateY(-1px);
+}
+
+.main-nav a:hover::after {
+  width: 0;
 }
 
 .dropdown {
@@ -977,7 +982,7 @@ img {
   align-items: center;
   justify-content: center;
   position: relative;
-  background: var(--gradient-dark);
+  background: linear-gradient(135deg, var(--dark) 0%, var(--darker) 100%);
   overflow: hidden;
 }
 
@@ -989,21 +994,21 @@ img {
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(circle at 20% 80%, rgba(142, 68, 173, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(243, 156, 18, 0.1) 0%, transparent 50%);
+    radial-gradient(circle at 20% 80%, rgba(142, 68, 173, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(142, 68, 173, 0.1) 0%, transparent 50%);
   animation: float 6s ease-in-out infinite;
 }
 
 .hero-content {
   text-align: center;
-  max-width: 800px;
+  max-width: 900px;
   padding: 0 20px;
   position: relative;
   z-index: 2;
 }
 
 .hero h2 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
   margin-bottom: 1.5rem;
   background: linear-gradient(135deg, var(--light) 0%, var(--primary-light) 100%);
   -webkit-background-clip: text;
@@ -1011,14 +1016,18 @@ img {
   background-clip: text;
   line-height: 1.2;
   animation: fadeInUp 1s ease-out 0.2s both;
+  font-weight: 600;
 }
 
 .hero p {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   color: var(--gray-light);
   margin-bottom: 2.5rem;
-  line-height: 1.6;
+  line-height: 1.7;
   animation: fadeInUp 1s ease-out 0.4s both;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-buttons {
@@ -1125,7 +1134,7 @@ img {
   position: absolute;
   top: -10px;
   right: -10px;
-  background: var(--gradient-secondary);
+  background: var(--gradient-primary);
   color: white;
   padding: 8px 16px;
   border-radius: 20px;
@@ -1175,13 +1184,14 @@ img {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--success);
+  color: var(--primary-light);
   font-size: 0.9rem;
   font-weight: 500;
 }
 
 .donation-note i {
   font-size: 1.1rem;
+  color: var(--success);
 }
 
 /* Enhanced Video Section */
@@ -1310,7 +1320,7 @@ img {
 }
 
 .read-more:hover {
-  color: var(--secondary);
+  color: white;
   transform: translateX(5px);
 }
 
@@ -1393,7 +1403,7 @@ img {
   display: block;
   font-size: 3rem;
   font-weight: 700;
-  color: var(--secondary);
+  color: var(--primary-light);
   margin-bottom: 0.5rem;
 }
 
@@ -1419,7 +1429,7 @@ img {
 }
 
 .footer-about h3 {
-  color: var(--primary-light);
+  color: white;
   margin-bottom: 1rem;
   font-size: 1.5rem;
 }
@@ -1430,7 +1440,7 @@ img {
 }
 
 .footer-links h4 {
-  color: var(--light);
+  color: white;
   margin-bottom: 1rem;
   font-size: 1.2rem;
 }
@@ -1444,7 +1454,7 @@ img {
 }
 
 .footer-links a {
-  color: var(--gray);
+  color: white;
   transition: var(--transition);
 }
 
@@ -1454,7 +1464,7 @@ img {
 }
 
 .footer-contact h4 {
-  color: var(--light);
+  color: white;
   margin-bottom: 1rem;
   font-size: 1.2rem;
 }
@@ -1736,7 +1746,7 @@ img {
 @media (prefers-contrast: high) {
   :root {
     --primary: #9b59b6;
-    --secondary: #f39c12;
+    --secondary: #9b59b6;
     --light: #ffffff;
     --gray: #888888;
   }

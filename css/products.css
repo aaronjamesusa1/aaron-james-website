@@ -302,7 +302,7 @@
   content: "•";
   position: absolute;
   left: 10px;
-  color: #f39c12;
+  color: var(--primary-light);
   font-size: 1.2rem;
 }
 
@@ -340,7 +340,7 @@
 }
 
 .btn-secondary {
-  background: #f39c12;
+  background: var(--primary);
   color: white;
 }
 
