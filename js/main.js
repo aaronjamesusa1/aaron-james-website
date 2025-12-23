@@ -6,11 +6,32 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollEffects();
     initIntersectionObserver();
     initParallaxEffects();
+    initScrollbarFade();
     updateCartCount();
     
     // Add loading animation
     document.body.classList.add('loaded');
 });
+
+// Scrollbar fade effect
+function initScrollbarFade() {
+    let scrollTimer = null;
+    
+    window.addEventListener('scroll', function() {
+        // Add scrolling class when user scrolls
+        document.body.classList.add('scrolling');
+        
+        // Clear existing timer
+        if (scrollTimer !== null) {
+            clearTimeout(scrollTimer);
+        }
+        
+        // Set timer to remove scrolling class after user stops scrolling
+        scrollTimer = setTimeout(function() {
+            document.body.classList.remove('scrolling');
+        }, 150);
+    });
+}
 
 // Mobile menu toggle with enhanced animations
 function initMobileMenu() {
